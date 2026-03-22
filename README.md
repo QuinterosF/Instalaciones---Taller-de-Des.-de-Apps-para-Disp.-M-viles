@@ -8,7 +8,7 @@
 
 Descargar las hojas de atajos recomendadas:
 
-[Guías de atajos - Dart ](DART.pdf)
+[Guía de atajos - Dart ](DART.pdf)
 
 
 # Instalaciones en el equipo

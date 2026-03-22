@@ -8,9 +8,7 @@
 
 Descargar las hojas de atajos recomendadas:
 
-[Guías de atajos - Dart ](https://github.com/Klerith/mas-talento/blob/main/dart/dart-cheat-sheet.pdf)
-
-[Guías de atajos - Flutter ](https://github.com/Klerith/mas-talento/blob/main/flutter/flutter-cheat-sheet.pdf)
+[Guías de atajos - Dart ](DART.pdf)
 
 
 # Instalaciones en el equipo
@@ -28,13 +26,15 @@ git config --global user.email "Tu correo"
 
 5. [Android Studio](https://developer.android.com/studio)
 
-6. [Flutter SDK](https://docs.flutter.dev/get-started/install)
+6. [Dart SDK](https://drive.google.com/drive/folders/19PJLBUwPFcV3sUJzPl9aKB_Sz9aRXl-S?usp=sharing)
 
-7. [NodeJS](https://nodejs.org/en/)
+7. [Flutter SDK](https://docs.flutter.dev/get-started/install)
 
-8. [Docker Desktop](https://www.docker.com/)
+8. [NodeJS](https://nodejs.org/en/)
 
-9. [Table Plus](https://tableplus.com/) <-- Visor de base de datos
+9. [Docker Desktop](https://www.docker.com/)
+
+10. [Table Plus](https://tableplus.com/) <-- Visor de base de datos
 
 
 ## Extensiones de VSCode

@@ -4,14 +4,32 @@
   <a href="https://docs.docker.com/" target="blank"><img src="https://storage.googleapis.com/cms-storage-bucket/6a07d8a62f4308d2b854.svg" width="330" alt="Flutter Logo" /></a>
 </p>
 
-# Flutter Móvil - Instalaciones recomendadas
+---
+
+# 📚 Material de apoyo: Dart desde Cero
 
 Descargar las hojas de atajos recomendadas:
 
 [Guía de atajos - Dart ](DART.pdf)
 
+Esta guía está diseñada como material didáctico para dominar los fundamentos de Dart. Haz clic en cada sección para explorar el contenido:
 
-# Instalaciones en el equipo
+1.  [**Tipo de Datos**](Dart/tipo_datos.md)
+    * Cadenas, Números, Booleanos y Nulos.
+2.  [**Variables y Operadores**](Dart/variables_operadores.md)
+    * Declaración (`var`, `final`, `const`) y lógica aritmética.
+3.  [**Estructura de Datos**](Dart/estructura_datos.md)
+    * Manejo de Listas, Sets y Mapas.
+4.  [**Estructuras de Control**](Dart/estructuras_control.md)
+    * Flujos de decisión y ciclos de repetición.
+5.  [**Funciones**](Dart/funciones.md)
+    * Tipos de argumentos y funciones de flecha.
+
+---
+
+# Flutter Móvil - Instalaciones recomendadas
+
+## Instalaciones en el equipo
 
 1. [Git](https://git-scm.com/)
 ``` 

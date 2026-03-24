@@ -14,7 +14,7 @@ Descargar las hojas de atajos recomendadas:
 
 Esta guía está diseñada como material didáctico para dominar los fundamentos de Dart. Haz clic en cada sección para explorar el contenido:
 
-1.  [**Tipo de Datos**](Dart/tipo_datos.md)
+1.  [**Tipo de Datos**](Dart/tipos_datos.md)
     * Cadenas, Números, Booleanos y Nulos.
 2.  [**Variables y Operadores**](Dart/variables_operadores.md)
     * Declaración (`var`, `final`, `const`) y lógica aritmética.

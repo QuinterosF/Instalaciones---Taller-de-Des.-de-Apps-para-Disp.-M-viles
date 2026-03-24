@@ -6,7 +6,8 @@
 
 ---
 
-# 📚 Material de apoyo: Dart desde Cero
+# 📚 Material de apoyo:
+# Dart desde Cero
 
 Descargar las hojas de atajos recomendadas:
 

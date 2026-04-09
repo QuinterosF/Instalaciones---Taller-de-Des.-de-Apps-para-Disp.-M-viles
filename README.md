@@ -11,7 +11,7 @@
 
 Descargar las hojas de atajos recomendadas:
 
-[Guía de atajos - Dart ](DART.pdf)
+[Guía de atajos - Dart ](docs/DART.pdf)
 
 Esta guía está diseñada como material didáctico para dominar los fundamentos de Dart. Haz clic en cada sección para explorar el contenido:
 

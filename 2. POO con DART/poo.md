@@ -1,19 +1,19 @@
 # Programación Orientada a Objetos (POO)
 
 ## 1. ¿Qué es un paradigma de programación?
-Es la forma en que los programadores decidimos cómo irá estructurado nuestro código[cite: 2]. Un paradigma establece un patrón o una forma en la que nuestros programas van a estar organizados[cite: 2].
+Es la forma en que los programadores decidimos cómo irá estructurado nuestro código. Un paradigma establece un patrón o una forma en la que nuestros programas van a estar organizados.
 
 ## 2. ¿Qué es la Programación Orientada a Objetos (POO)?
-Es un paradigma de programación que organiza el software en "objetos" que combinan datos o características (**atributos**) y comportamientos o funcionalidades (**métodos**), modelando elementos del mundo real[cite: 2].
+Es un paradigma de programación que organiza el software en "objetos" que combinan datos o características (**atributos**) y comportamientos o funcionalidades (**métodos**), modelando elementos del mundo real.
 
-*   **Atributos:** Datos y características[cite: 2].
-*   **Métodos:** Funcionalidades y comportamientos[cite: 2].
+*   **Atributos:** Datos y características.
+*   **Métodos:** Funcionalidades y comportamientos.
 
 ## 3. Clases (Plantilla de un objeto)
-Una Clase es la representación en código de lo que es un objeto[cite: 2]. Se conoce también como una plantilla o prototipo a partir del cual se crean copias con la misma estructura pero valores distintos[cite: 2].
+Una Clase es la representación en código de lo que es un objeto. Se conoce también como una plantilla o prototipo a partir del cual se crean copias con la misma estructura pero valores distintos.
 
 ### Ejemplo en Dart: Clase Usuario
-Basado en el diagrama de la plantilla de usuario[cite: 2]:
+Basado en el diagrama de la plantilla de usuario:
 
 ```dart
 class Usuario {
@@ -43,13 +43,13 @@ class Usuario {
 ```
 
 ### 3.1. Relación entre Clases
-Los objetos pueden relacionarse entre sí para realizar funcionalidades conjuntas o trabajar de forma individual[cite: 2]. Por ejemplo, un objeto **Autor** y una **Categoría** pueden conectarse con un objeto **Blog**[cite: 2].
+Los objetos pueden relacionarse entre sí para realizar funcionalidades conjuntas o trabajar de forma individual. Por ejemplo, un objeto **Autor** y una **Categoría** pueden conectarse con un objeto **Blog**.
 
 ## 4. Instancia de una clase (Objeto funcional)
-Cada copia que hacemos de una clase es un objeto; en programación, esto se llama **instancia**[cite: 2]. Es una realización concreta de la plantilla que reside en la memoria con valores únicos[cite: 2].
+Cada copia que hacemos de una clase es un objeto; en programación, esto se llama **instancia**. Es una realización concreta de la plantilla que reside en la memoria con valores únicos.
 
 ### Ejemplo en Dart: Creación de Instancias
-Modelando a Tony Stark y Peter Parker[cite: 2]:
+Modelando a Tony Stark y Peter Parker:
 
 ```dart
 void main() {
@@ -69,9 +69,9 @@ void main() {
 ## 5. Cuatro Pilares de la POO
 
 ### 5.1. Abstracción
-Es el proceso de identificar las características y comportamientos esenciales de un objeto, ignorando los detalles complejos e innecesarios (como "color de piel" o "lunares" si no son relevantes para el sistema)[cite: 2].
+Es el proceso de identificar las características y comportamientos esenciales de un objeto, ignorando los detalles complejos e innecesarios (como "color de piel" o "lunares" si no son relevantes para el sistema).
 
-En Dart, esto se implementa a menudo mediante **clases abstractas**, las cuales no se pueden instanciar directamente[cite: 2].
+En Dart, esto se implementa a menudo mediante **clases abstractas**, las cuales no se pueden instanciar directamente.
 
 ```dart
 abstract class VehiculoBase {
@@ -84,7 +84,7 @@ abstract class VehiculoBase {
 ```
 
 ### 5.2. Herencia
-Mecanismo que permite a una clase hija (subclase) heredar atributos y métodos de una clase padre (superclase), promoviendo la reutilización de código bajo una jerarquía "es-un"[cite: 2].
+Mecanismo que permite a una clase hija (subclase) heredar atributos y métodos de una clase padre (superclase), promoviendo la reutilización de código bajo una jerarquía "es-un".
 
 ```dart
 class Vehiculo {
@@ -107,7 +107,7 @@ class Motocicleta extends Vehiculo {
 ```
 
 ### 5.3. Polimorfismo
-Es la capacidad de diferentes clases de responder al mismo método de formas distintas[cite: 2]. Permite que una subclase cambie el comportamiento predeterminado de los métodos de su superclase[cite: 2].
+Es la capacidad de diferentes clases de responder al mismo método de formas distintas. Permite que una subclase cambie el comportamiento predeterminado de los métodos de su superclase.
 
 ```dart
 abstract class Forma {
@@ -126,9 +126,9 @@ class Triangulo extends Forma {
 ```
 
 ### 5.4. Encapsulamiento
-Consiste en restringir el acceso directo a los datos internos para proteger la integridad del objeto[cite: 2]. Se utiliza una interfaz pública (Getters y Setters) para interactuar con atributos privados de manera controlada[cite: 2].
+Consiste en restringir el acceso directo a los datos internos para proteger la integridad del objeto. Se utiliza una interfaz pública (Getters y Setters) para interactuar con atributos privados de manera controlada.
 
-En Dart, la privacidad se indica con el guion bajo (`_`)[cite: 2].
+En Dart, la privacidad se indica con el guion bajo (`_`).
 
 ```dart
 class CuentaBancaria {
@@ -149,16 +149,16 @@ class CuentaBancaria {
 ---
 
 ## 6. Mixins
-Un **mixin** en Dart permite reutilizar código en múltiples jerarquías de clases sin usar la herencia tradicional[cite: 2]. Se "inyectan" funcionalidades usando la palabra clave `with`[cite: 2].
+Un **mixin** en Dart permite reutilizar código en múltiples jerarquías de clases sin usar la herencia tradicional. Se "inyectan" funcionalidades usando la palabra clave `with`.
 
 **Características:**
-*   Comparten comportamientos entre clases no relacionadas jerárquicamente[cite: 2].
-*   Se declaran con `mixin` y no pueden tener constructores[cite: 2].
+*   Comparten comportamientos entre clases no relacionadas jerárquicamente.
+*   Se declaran con `mixin` y no pueden tener constructores.
 
 
 
 ### Ejemplo en Dart: Comportamientos de Animales
-Basado en el diagrama de animales[cite: 2]:
+Basado en el diagrama de animales:
 
 ```dart
 abstract class Animal {}

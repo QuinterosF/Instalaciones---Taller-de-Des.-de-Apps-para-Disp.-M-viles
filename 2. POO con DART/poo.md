@@ -12,6 +12,8 @@ Es un paradigma de programación que organiza el software en "objetos" que combi
 ## 3. Clases (Plantilla de un objeto)
 Una Clase es la representación en código de lo que es un objeto. Se conoce también como una plantilla o prototipo a partir del cual se crean copias con la misma estructura pero valores distintos.
 
+<p align="center"> <img src="../img/ejem_clase.png" width="500"> </p>
+
 ### Ejemplo en Dart: Clase Usuario
 Basado en el diagrama de la plantilla de usuario:
 
@@ -45,8 +47,12 @@ class Usuario {
 ### 3.1. Relación entre Clases
 Los objetos pueden relacionarse entre sí para realizar funcionalidades conjuntas o trabajar de forma individual. Por ejemplo, un objeto **Autor** y una **Categoría** pueden conectarse con un objeto **Blog**.
 
+<p align="center"> <img src="../img/ejem_rel_clase.png" width="550"> </p>
+
 ## 4. Instancia de una clase (Objeto funcional)
 Cada copia que hacemos de una clase es un objeto; en programación, esto se llama **instancia**. Es una realización concreta de la plantilla que reside en la memoria con valores únicos.
+
+<p align="center"> <img src="../img/ejem_instance_class.png" width="600"> </p>
 
 ### Ejemplo en Dart: Creación de Instancias
 Modelando a Tony Stark y Peter Parker:
@@ -71,6 +77,8 @@ void main() {
 ### 5.1. Abstracción
 Es el proceso de identificar las características y comportamientos esenciales de un objeto, ignorando los detalles complejos e innecesarios (como "color de piel" o "lunares" si no son relevantes para el sistema).
 
+<p align="center"> <img src="../img/ejem_abstraccion.png" width="270"> </p>
+
 En Dart, esto se implementa a menudo mediante **clases abstractas**, las cuales no se pueden instanciar directamente.
 
 ```dart
@@ -85,6 +93,8 @@ abstract class VehiculoBase {
 
 ### 5.2. Herencia
 Mecanismo que permite a una clase hija (subclase) heredar atributos y métodos de una clase padre (superclase), promoviendo la reutilización de código bajo una jerarquía "es-un".
+
+<p align="center"> <img src="../img/ejem_herencia.png" width="370"> </p>
 
 ```dart
 class Vehiculo {
@@ -109,6 +119,8 @@ class Motocicleta extends Vehiculo {
 ### 5.3. Polimorfismo
 Es la capacidad de diferentes clases de responder al mismo método de formas distintas. Permite que una subclase cambie el comportamiento predeterminado de los métodos de su superclase.
 
+<p align="center"> <img src="../img/ejem_polimorfismo4.png" width="550"> </p>
+
 ```dart
 abstract class Forma {
   void dibujar();
@@ -127,6 +139,8 @@ class Triangulo extends Forma {
 
 ### 5.4. Encapsulamiento
 Consiste en restringir el acceso directo a los datos internos para proteger la integridad del objeto. Se utiliza una interfaz pública (Getters y Setters) para interactuar con atributos privados de manera controlada.
+
+<p align="center"> <img src="../img/ejem_encapsulamiento.png" width="250"> </p>
 
 En Dart, la privacidad se indica con el guion bajo (`_`).
 
@@ -155,9 +169,10 @@ Un **mixin** en Dart permite reutilizar código en múltiples jerarquías de cla
 *   Comparten comportamientos entre clases no relacionadas jerárquicamente.
 *   Se declaran con `mixin` y no pueden tener constructores.
 
-
-
 ### Ejemplo en Dart: Comportamientos de Animales
+
+<p align="center"> <img src="../img/ejem_mixin.png" width="800"> </p>
+
 Basado en el diagrama de animales:
 
 ```dart

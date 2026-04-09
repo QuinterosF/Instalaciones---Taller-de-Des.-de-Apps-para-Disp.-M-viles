@@ -1,4 +1,4 @@
-# Programación Orientada a Objetos (POO)
+<p align="center"> <h1 align="center"> Programación Orientada a Objetos (POO) </h1> </p>
 
 ## 1. ¿Qué es un paradigma de programación?
 Es la forma en que los programadores decidimos cómo irá estructurado nuestro código. Un paradigma establece un patrón o una forma en la que nuestros programas van a estar organizados.
@@ -50,7 +50,9 @@ Los objetos pueden relacionarse entre sí para realizar funcionalidades conjunta
 <p align="center"> <img src="../img/ejem_rel_clase.png" width="550"> </p>
 
 ## 4. Instancia de una clase (Objeto funcional)
-Cada copia que hacemos de una clase es un objeto; en programación, esto se llama **instancia**. Es una realización concreta de la plantilla que reside en la memoria con valores únicos.
+Cada copia que nosotros hagamos de una clase será un objeto, en programación a estas copias se las conoce como instancias de una clase.
+Una instancia es un objeto específico y funcional creado a partir de una clase. Funciona como una realización concreta de la "plantilla" (clase) que reside en la memoria, con sus propios valores únicos para los atributos, pero compartiendo la misma estructura y métodos definidos en la clase.
+
 
 <p align="center"> <img src="../img/ejem_instance_class.png" width="600"> </p>
 
@@ -60,10 +62,10 @@ Modelando a Tony Stark y Peter Parker:
 ```dart
 void main() {
   // Instancia 1: Usuario 1
-  Usuario usuario1 = Usuario("Tony", "Stark", "tony@gmail.com", "123abc", "555-0101");
+  Usuario usuario1 = Usuario("Tony", "Stark", "tony@gmail.com", "123abc");
 
   // Instancia 2: Usuario 2
-  Usuario usuario2 = Usuario("Peter", "Parker", "peter@gmail.com", "456xyz", "555-0202");
+  Usuario usuario2 = Usuario("Peter", "Parker", "peter@gmail.com", "456xyz");
 
   usuario1.iniciarSesion();
   usuario2.encriptarPassword();
@@ -91,8 +93,14 @@ abstract class VehiculoBase {
 }
 ```
 
+Una clase abstracta en Dart es una clase que no se puede instanciar directamente, marcada con la palabra clave ```abstract```. Se utiliza para definir una interfaz común o un comportamiento base que otras clases (subclases) deben ***implementar o heredar***, permitiendo métodos abstractos (sin cuerpo) y concretos (con implementación).
+
+**Métodos Abstractos:** Métodos sin implementación que las subclases deben sobrescribir (```@override```).
+
+**Métodos Concretos:** Puede contener métodos con código funcional que las subclases heredan.
+
 ### 5.2. Herencia
-Mecanismo que permite a una clase hija (subclase) heredar atributos y métodos de una clase padre (superclase), promoviendo la reutilización de código bajo una jerarquía "es-un".
+Mecanismo que permite a una clase hija (subclase) heredar atributos y métodos de una clase padre (superclase), promoviendo la reutilización de código bajo una ***jerarquía "es-un"***.
 
 <p align="center"> <img src="../img/ejem_herencia.png" width="370"> </p>
 
@@ -100,8 +108,9 @@ Mecanismo que permite a una clase hija (subclase) heredar atributos y métodos d
 class Vehiculo {
   String placa;
   String marca;
+  String modelo;
   
-  Vehiculo(this.placa, this.marca);
+  Vehiculo(this.placa, this.marca, this.modelo);
 
   void acelerar() => print("Acelerando...");
   void frenar() => print("Frenando...");
@@ -110,9 +119,31 @@ class Vehiculo {
 // Subclase Motocicleta
 class Motocicleta extends Vehiculo {
   double peso;
-  Motocicleta(String placa, String marca, this.peso) : super(placa, marca);
+
+  Motocicleta(
+    String placa,
+    String marca,
+    String modelo,
+    this.peso
+  ) : super(placa, marca, modelo);
 
   void usarCasco() => print("Casco puesto.");
+}
+
+// Subclase Motocicleta
+class Autobus extends Vehiculo {
+  int numero_de_puertas;
+  int numero_de_asientos;
+
+  Autobus(
+    String placa,
+    String marca,
+    String modelo,
+    this.numero_de_puertas,
+    this.numero_de_asientos
+  ) : super(placa, marca, modelo);
+
+  void cargarAire() => print("Cargando aire...");
 }
 ```
 
@@ -135,12 +166,27 @@ class Triangulo extends Forma {
   @override
   void dibujar() => print("Dibujando un Triángulo.");
 }
+
+class Rectangulo extends Forma {
+  @override
+  void dibujar() => print("Dibujando un Rectangulo.");
+}
 ```
 
 ### 5.4. Encapsulamiento
-Consiste en restringir el acceso directo a los datos internos para proteger la integridad del objeto. Se utiliza una interfaz pública (Getters y Setters) para interactuar con atributos privados de manera controlada.
+Consiste en restringir el acceso directo a atributos y métodos internos de una clase para que no puedan ser modificados sin autorización, ***protegiendo así la integridad del objeto***.
+
+Utiliza modificadores de acceso (```private```, ```public```, ```protected```) y métodos ```getters/setters```.
+*Así se expone sólo una interfaz pública para interactuar con la clase de manera controlada y segura.*
 
 <p align="center"> <img src="../img/ejem_encapsulamiento.png" width="250"> </p>
+
+**Acceso Controlado (Getters y Setters):** Los getters y setters son ***métodos públicos*** especiales utilizados para acceder (```get```) y modificar (```set```) los atributos privados de una clase.
+
+*	**Getter (Accesor):** Método que devuelve el valor de una variable privada.
+
+*	**Setter (Mutador):** Método que establece o actualiza el valor de una variable privada, *a menudo incluyendo lógica de validación*.
+
 
 En Dart, la privacidad se indica con el guion bajo (`_`).
 
@@ -166,8 +212,11 @@ class CuentaBancaria {
 Un **mixin** en Dart permite reutilizar código en múltiples jerarquías de clases sin usar la herencia tradicional. Se "inyectan" funcionalidades usando la palabra clave `with`.
 
 **Características:**
-*   Comparten comportamientos entre clases no relacionadas jerárquicamente.
-*   Se declaran con `mixin` y no pueden tener constructores.
+*	**Reutilización:** Permiten compartir comportamientos (funcionalidades) entre clases que no están relacionadas jerárquicamente.
+*	**Sintaxis:** Se declaran con la palabra clave `mixiny` se aplican con `with`.
+*	**Múltiples Mixins:** Una clase puede utilizar uno o más mixins (por ejemplo: `class Pato extends Ave with Caminante, Nadador, Volador`).
+*	**Restricciones:** No pueden tener constructores definidos.
+*	**Limitación de alcance:** Se puede usar la palabra clave on para limitar qué clases pueden usar el mixin.
 
 ### Ejemplo en Dart: Comportamientos de Animales
 

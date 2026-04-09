@@ -15,15 +15,15 @@ Descargar las hojas de atajos recomendadas:
 
 Esta guía está diseñada como material didáctico para dominar los fundamentos de Dart. Haz clic en cada sección para explorar el contenido:
 
-1.  [**Tipo de Datos**](1. Fundamentos - DART/1_tipos_datos.md)
+1.  [**Tipo de Datos**](1.%20Fundamentos%20-%20DART/1_tipos_datos.md)
     * Cadenas, Números, Booleanos y Nulos.
-2.  [**Variables y Operadores**](1. Fundamentos - DART/2_variables_operadores.md)
+2.  [**Variables y Operadores**](1.%20Fundamentos%20-%20DART/2_variables_operadores.md)
     * Declaración (`var`, `final`, `const`) y lógica aritmética.
-3.  [**Estructura de Datos**](1. Fundamentos - DART/3_estructura_datos.md)
+3.  [**Estructura de Datos**](1.%20Fundamentos%20-%20DART/3_estructura_datos.md)
     * Manejo de Listas, Sets y Mapas.
-4.  [**Estructuras de Control**](1. Fundamentos - DART/4_estructuras_control.md)
+4.  [**Estructuras de Control**](1.%20Fundamentos%20-%20DART/4_estructuras_control.md)
     * Flujos de decisión y ciclos de repetición.
-5.  [**Funciones**](1. Fundamentos - DART/5_funciones.md)
+5.  [**Funciones**](1.%20Fundamentos%20-%20DART/5_funciones.md)
     * Tipos de argumentos y funciones de flecha.
 
 ---

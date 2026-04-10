@@ -1,6 +1,6 @@
 # Guía de Solución: Sistema de Gestión de Flota de Transporte "Rutas"
 
-#### Descargar las *INSTRUCCIONES DE LA PRÁCTICA* en `PDF`: [Práctica de laboratorio.pdf](docs/PRAC_LAB_POO.pdf)
+#### Descargar las *INSTRUCCIONES DE LA PRÁCTICA* en `PDF`: [Práctica de laboratorio.pdf](../docs/PRAC_LAB_POO.pdf)
 
 <p align="center"> <img src="../img/diagram_class_uml_1.png" width="500"> </p>
 

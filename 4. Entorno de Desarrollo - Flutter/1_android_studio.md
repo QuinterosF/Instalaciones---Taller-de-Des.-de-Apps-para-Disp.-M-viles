@@ -42,4 +42,4 @@ Flutter requiere herramientas específicas que no siempre vienen instaladas por 
 
 -----
 
-> **Siguiente paso:** Una vez configurado Android Studio, podemos proceder a la [Instalación de Flutter](https://www.google.com/search?q=./flutter_install.md).
+> **Siguiente paso:** Una vez configurado Android Studio, podemos proceder a la [Instalación de Flutter](2_flutter_install.md).

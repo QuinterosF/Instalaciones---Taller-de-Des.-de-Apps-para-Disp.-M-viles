@@ -6,25 +6,45 @@
 
 ---
 
-# 📚 MATERIAL DE APOYO:
-# Dart desde Cero
+# 📚 MATERIAL DEL CURSO:
 
-Descargar las hojas de atajos recomendadas:
+Haz clic en cada sección para explorar el contenido:
 
-[Guía de atajos - Dart ](docs/DART.pdf)
+# 1. FUNDAMENTOS - DART
 
-Esta guía está diseñada como material didáctico para dominar los fundamentos de Dart. Haz clic en cada sección para explorar el contenido:
+#### Descargar la guía de atajos en `PDF`: [Guía de atajos - Dart.pdf](docs/DART.pdf)
 
-1.  [**Tipo de Datos**](1.%20Fundamentos%20-%20DART/1_tipos_datos.md)
-    * Cadenas, Números, Booleanos y Nulos.
-2.  [**Variables y Operadores**](1.%20Fundamentos%20-%20DART/2_variables_operadores.md)
-    * Declaración (`var`, `final`, `const`) y lógica aritmética.
-3.  [**Estructura de Datos**](1.%20Fundamentos%20-%20DART/3_estructura_datos.md)
-    * Manejo de Listas, Sets y Mapas.
-4.  [**Estructuras de Control**](1.%20Fundamentos%20-%20DART/4_estructuras_control.md)
-    * Flujos de decisión y ciclos de repetición.
-5.  [**Funciones**](1.%20Fundamentos%20-%20DART/5_funciones.md)
-    * Tipos de argumentos y funciones de flecha.
+1.1.  [**Tipo de Datos**](1.%20Fundamentos%20-%20DART/1_tipos_datos.md)
+  * Cadenas, Números, Booleanos y Nulos.
+    
+1.2.  [**Variables y Operadores**](1.%20Fundamentos%20-%20DART/2_variables_operadores.md)
+  * Declaración (`var`, `final`, `const`) y lógica aritmética.
+    
+1.3.  [**Estructura de Datos**](1.%20Fundamentos%20-%20DART/3_estructura_datos.md)
+  * Manejo de Listas, Sets y Mapas.
+    
+1.4.  [**Estructuras de Control**](1.%20Fundamentos%20-%20DART/4_estructuras_control.md)
+  * Flujos de decisión y ciclos de repetición.
+    
+1.5.  [**Funciones**](1.%20Fundamentos%20-%20DART/5_funciones.md)
+  * Tipos de argumentos y funciones de flecha.
+  
+# 2. Programación Orientada a Objetos (POO) con DART
+
+#### Descargar el texto de POO en `PDF`: [Programación Orientada a Objetos.pdf](docs/POO.pdf)
+
+2.1.  [**Fundamentos - POO** ***(+ ejemplos)***](2.%20POO%20-%20DART/poo.md)
+  * ¿Qué es la Programación Orientada a Objetos?
+  * Clases e Intancia de una Clase (Objeto)
+  * Abstracción
+  * Herencia
+  * Polimorfismo
+  * Encapsulamiento
+  * Mixin
+
+2.2.  **Ejemplo de POO con DART**
+  * [Práctica de Laboratorio (paso a paso)](2.%20POO%20-%20DART/ejem_poo_dart.md)
+  * [*código del Ejemplo*](2.%20POO%20-%20DART/Ejemplo%20POO%20con%20DART/)
 
 ---
 

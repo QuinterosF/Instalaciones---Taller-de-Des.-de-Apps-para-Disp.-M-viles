@@ -203,4 +203,4 @@ void main() {
 *   **Decisión dinámica**: En tiempo de ejecución, Dart revisa qué es el objeto en realidad (un Bus o una Minivan) y usa la versión del método que le corresponde.
 *   **Escalabilidad**: Si mañana la empresa compra un Taxi, solo tendrían que crear la clase `Taxi`, heredar de `Vehiculo` y sobrescribir su propio método; el bucle `for` en el `main()` no tendría que modificarse en absoluto.
 
-  [*DESCARGAR CÓDIGO COMPLETO DE LA SOLUCIÓN EN DART*](2.%20POO%20-%20DART/Ejemplo%20POO%20con%20DART/)
+  [*DESCARGAR CÓDIGO COMPLETO DE LA SOLUCIÓN EN DART*](Ejemplo%20POO%20con%20DART/)

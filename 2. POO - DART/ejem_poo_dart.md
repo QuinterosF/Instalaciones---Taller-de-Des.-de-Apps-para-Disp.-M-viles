@@ -1,4 +1,4 @@
-# PRÁCTICA DE LABORATORIO: Sistema de Gestión de Flota de Transporte "Rutas"
+# Práctica de Laboratorio: Sistema de Gestión de Flota de Transporte "Rutas"
 
 #### Descargar las *INSTRUCCIONES DE LA PRÁCTICA* en `PDF`: [Práctica de laboratorio.pdf](../docs/PRAC_LAB_POO.pdf)
 

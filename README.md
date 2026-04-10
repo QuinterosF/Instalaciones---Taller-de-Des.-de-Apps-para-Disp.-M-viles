@@ -42,9 +42,9 @@ Haz clic en cada sección para explorar el contenido:
   * Encapsulamiento
   * Mixin
 
-2.2.  **Ejemplo de POO con DART**
-  * [Práctica de Laboratorio (paso a paso)](2.%20POO%20-%20DART/ejem_poo_dart.md)
-  * [*código del Ejemplo*](2.%20POO%20-%20DART/Ejemplo%20POO%20con%20DART/)
+2.2.  **Práctica de Laboratorio de POO con DART**
+  * [Sistema de Gestión de Flota de Transporte "Rutas".](2.%20POO%20-%20DART/ejem_poo_dart.md) *(guía paso a paso)*
+  * [*Código de la práctica*](2.%20POO%20-%20DART/Ejemplo%20POO%20con%20DART/)
 
 ---
 

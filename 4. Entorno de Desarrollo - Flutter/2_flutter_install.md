@@ -55,4 +55,4 @@ Si el sistema te devuelve los números de versión, ¡felicidades\! Ya tienes el
 
 > **Siguiente paso:** Ahora que el SDK está instalado, debemos terminar de configurar las licencias y herramientas en
 >
-> [3. Configuración de Flutter](https://www.google.com/search?q=./flutter_config.md).
+> [3. Configuración de Flutter](3_flutter_config.md).

@@ -40,4 +40,4 @@ Ahora, tanto **Android toolchain** como **Android Studio** deberían aparecer co
 
 -----
 
-> **Siguiente paso:** Para completar el entorno, configuraremos un dispositivo virtual en [4. Emuladores](emuladores.md).
+> **Siguiente paso:** Para completar el entorno, configuraremos un dispositivo virtual en [4. Emuladores](4_emuladores.md).

@@ -1,4 +1,4 @@
-# Instalaciones - Taller de Desarrollo de Aplicaciones para Dispositivos Móviles
+# Taller de Desarrollo de Aplicaciones para Dispositivos Móviles
 
 <p align="center">
   <a href="https://docs.docker.com/" target="blank"><img src="https://storage.googleapis.com/cms-storage-bucket/6a07d8a62f4308d2b854.svg" width="330" alt="Flutter Logo" /></a>
@@ -45,6 +45,33 @@ Haz clic en cada sección para explorar el contenido:
 2.2.  **Práctica de Laboratorio de POO con DART**
   * [Sistema de Gestión de Flota de Transporte "Rutas".](2.%20POO%20-%20DART/ejem_poo_dart.md) *(guía paso a paso)*
   * [*Código de la práctica*](2.%20POO%20-%20DART/Ejemplo%20POO%20con%20DART/)
+
+# 4. Entorno de Desarrollo (Setup) - Flutter 🛠️
+
+Antes de comenzar a escribir código en Dart y crear aplicaciones con Flutter, es indispensable preparar nuestra computadora. Esta sección contiene el paso a paso detallado para instalar las herramientas necesarias, configurar las variables de sistema y dejar listo nuestro dispositivo de pruebas.
+
+Por favor, sigue esta guía en el **orden estricto** en el que se presenta para evitar errores de compatibilidad:
+
+1. [**Instalación y Configuración de Android Studio**](4.%20Entorno%20de%20Desarrollo%20-%20Flutter/1_android_studio.md)
+   * Descarga del IDE base.
+   * Configuración de Android SDK Platforms.
+   * Instalación de SDK Tools obligatorias (Command-line Tools, CMake, etc.).
+
+2. [**Instalación de Flutter SDK**](4.%20Entorno%20de%20Desarrollo%20-%20Flutter/2_flutter_install.md)
+   * Descarga de la última versión estable.
+   * Extracción en rutas seguras.
+   * Configuración de las Variables de Entorno (PATH) en Windows.
+
+3. [**Configuración Final de Flutter**](4.%20Entorno%20de%20Desarrollo%20-%20Flutter/3_flutter_config.md)
+   * Diagnóstico del sistema con `flutter doctor`.
+   * Aceptación de licencias de Android.
+
+4. [**Configuración de Emuladores y Dispositivos Físicos**](4.%20Entorno%20de%20Desarrollo%20-%20Flutter/4_emuladores.md)
+   * Creación y configuración avanzada de un Android Virtual Device (AVD).
+   * Tips de rendimiento y aceleración por hardware.
+   * Configuración de un teléfono Android físico (Opciones de Desarrollador y Depuración USB).
+
+> **💡 Nota:** Si en algún paso la terminal (`cmd` o `PowerShell`) no reconoce un comando, recuerda cerrarla y volverla a abrir para que reconozca los nuevos cambios en el sistema.
 
 ---
 

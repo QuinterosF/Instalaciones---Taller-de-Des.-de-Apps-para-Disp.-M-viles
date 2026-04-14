@@ -42,9 +42,11 @@ Haz clic en cada sección para explorar el contenido:
   * Encapsulamiento
   * Mixin
 
-2.2.  **Práctica de Laboratorio de POO con DART**
-  * [Sistema de Gestión de Flota de Transporte "Rutas".](2.%20POO%20-%20DART/ejem_poo_dart.md) *(guía paso a paso)*
-  * [*Código de la práctica*](2.%20POO%20-%20DART/Ejemplo%20POO%20con%20DART/)
+2.2.  **Prácticac de Laboratorio de POO con DART**
+  * [`Práctica 1`: Sistema de Gestión de Flota de Transporte "Rutas".](2.%20POO%20-%20DART/1_ejem_poo_dart.md) *(guía paso a paso)*
+  * [*Código de la práctica 1*](2.%20POO%20-%20DART/Ejemplo%201%20-%20POO%20con%20DART/)
+  * [`Práctica 2`: Sistema de Combate (Videojuego).](2.%20POO%20-%20DART/2_ejem_poo_dart.md) *(guía paso a paso)*
+  * [*Código de la práctica 2*](2.%20POO%20-%20DART/Ejemplo%202%20-%20POO%20con%20DART/)
 
 # 4. Entorno de Desarrollo (Setup) - Flutter 🛠️
 

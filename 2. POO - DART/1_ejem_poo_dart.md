@@ -1,12 +1,14 @@
-# Práctica de Laboratorio: Sistema de Gestión de Flota de Transporte "Rutas"
+# Práctica de Laboratorio `1`: Sistema de Gestión de Flota de Transporte "Rutas"
 
-#### Descargar las *INSTRUCCIONES DE LA PRÁCTICA* en `PDF`: [Práctica de laboratorio.pdf](../docs/PRAC_LAB_POO.pdf)
-
-<p align="center"> <img src="../img/diagram_class_uml_1.png" width="500"> </p>
+#### Descargar las *INSTRUCCIONES DE LA PRÁCTICA* en `PDF`: [Práctica de laboratorio 1.pdf](../docs/PRAC_LAB_POO_1.pdf)
 
 **CONTEXTO:** Una asociación de transporte requiere automatizar la gestión de su flota de vehículos. Para ello, se necesita desarrollar el núcleo de un sistema en Dart que modele el comportamiento de sus diferentes unidades de transporte, garantizando la seguridad de la información interna de cada vehículo y estandarizando las operaciones de ruta.
 
 **INSTRUCCIONES:** Desarrolle una solución en `Dart` aplicando los cuatro pilares de la [Programación Orientada a Objetos](poo.md), guiándose por el Diagrama de Clases UML adjunto. Su código debe cumplir con los siguientes requerimientos:
+
+### Diagrama de Clases (UML)
+
+<p align="center"> <img src="../img/diagram_class_uml_1.png" width="500"> </p>
 
 1.	***Abstracción:*** Defina el concepto general de un vehículo en el sistema. Este componente no debe poder instanciarse directamente, pero debe establecer la estructura base (marca y modelo) y definir la firma de la acción principal del sistema: `iniciarRuta()`.
 
@@ -203,4 +205,6 @@ void main() {
 *   **Decisión dinámica**: En tiempo de ejecución, Dart revisa qué es el objeto en realidad (un Bus o una Minivan) y usa la versión del método que le corresponde.
 *   **Escalabilidad**: Si mañana la empresa compra un Taxi, solo tendrían que crear la clase `Taxi`, heredar de `Vehiculo` y sobrescribir su propio método; el bucle `for` en el `main()` no tendría que modificarse en absoluto.
 
-  [*DESCARGAR CÓDIGO COMPLETO DE LA SOLUCIÓN EN DART*](Ejemplo%20POO%20con%20DART/)
+---
+
+>  [*DESCARGAR CÓDIGO COMPLETO DE LA SOLUCIÓN EN DART*](Ejemplo%201%20-%20POO%20con%20DART/)

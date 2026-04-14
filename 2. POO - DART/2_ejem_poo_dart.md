@@ -1,5 +1,7 @@
 # Práctica de Laboratorio `2`: Sistema de Combate (Videojuego)
 
+#### Descargar las *INSTRUCCIONES DE LA PRÁCTICA* en `PDF`: [Práctica de laboratorio 2.pdf](../docs/PRAC_LAB_POO_2.pdf)
+
 ## 📖 Contexto
 Un estudio de desarrollo de videojuegos te ha contratado para programar el núcleo de su nuevo juego de rol. Necesitan un sistema que administre a los personajes del jugador, controle sus puntos de vida, ejecute sus ataques y utilice habilidades especiales.
 
@@ -8,29 +10,7 @@ Desarrolle una solución en Dart aplicando los 4 pilares de la POO, Mixins, Estr
 
 ### Diagrama de Clases (UML)
 
-```text
-               <<<abstract>>>
-                 Personaje
---------------------------------------------
- + String nombre
- - _puntosVida: int
---------------------------------------------
- + Personaje({required nombre})
- + recibirDano({required cantidad: int}): void
- + estaVivo(): bool
- + set puntosVida(value: int)
- + atacar(): void <<<abstract>>>
-                     △
-                     | extends
-                     |
-    +---------------------------------+                  <<<mixin>>>
-    |                                 |                    Curador
-Guerrero                            Mago               -----------------
-+ int fuerza                        + int poderMagico  + curar(heroe: Personaje, 
-+ atacar()                          + int puntosCuracion       puntosCuracion: int)
-                                    + atacar()
-                                    (+ usa Curador)
-```
+<p align="center"> <img src="../img/diagram_class_uml_2.png" width="500"> </p>
 
 ### Requerimientos del Sistema:
 **1.	Abstracción y Encapsulamiento:** Crea la clase base Personaje. El atributo `_puntosVida` debe ser privado (iniciando en 100). Implementa métodos para reducir la vida (`recibirDano`) y verificar si el personaje sigue en pie (`estaVivo`). Define el método abstracto `atacar()`.
@@ -178,3 +158,6 @@ void main() {
   );
 }
 ```
+---
+
+>  [*DESCARGAR CÓDIGO COMPLETO DE LA SOLUCIÓN EN DART*](Ejemplo%202%20-%20POO%20con%20DART/)

@@ -41,9 +41,9 @@ classDiagram
         +curar(heroe: Personaje, puntosCuracion: int) void
     }
     
-    Personaje <|-- Guerrero
-    Personaje <|-- Mago
-    Mago --|> Curador
+    Personaje <|-- Guerrero : extends
+    Personaje <|-- Mago : extends
+    Mago <-- Curador : with
 ```
 
 ### Requerimientos del Sistema:

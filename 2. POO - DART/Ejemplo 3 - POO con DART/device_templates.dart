@@ -1,5 +1,3 @@
-// device_templates.dart
-
 abstract class DispositivoInteligente {
   String nombre;
   

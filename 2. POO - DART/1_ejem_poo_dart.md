@@ -8,7 +8,36 @@
 
 ### Diagrama de Clases (UML)
 
-<p align="center"> <img src="../img/diagram_class_uml_1.png" width="500"> </p>
+<!-- <p align="center"> <img src="../img/diagram_class_uml_1.png" width="500"> </p> -->
+
+```mermaid
+classDiagram
+
+
+
+    class Vehiculo {
+        <<abstract>>
+        +String marca
+        +String modelo
+        -_kilometraje : double
+        +registrarViaje(distancia: double) void
+        +getKilometraje() double
+        +iniciarRuta()* void
+    }
+    
+    class Bus {
+        +int capacidadPasajeros
+        +iniciarRuta() void
+    }
+    
+    class Minivan {
+        +String tipoTraccion
+        +iniciarRuta() void
+    }
+    
+    Vehiculo <|-- Bus
+    Vehiculo <|-- Minivan
+```
 
 1.	***Abstracción:*** Defina el concepto general de un vehículo en el sistema. Este componente no debe poder instanciarse directamente, pero debe establecer la estructura base (marca y modelo) y definir la firma de la acción principal del sistema: `iniciarRuta()`.
 

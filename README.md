@@ -28,6 +28,9 @@ Haz clic en cada sección para explorar el contenido:
     
 1.5.  [**Funciones**](1.%20Fundamentos%20-%20DART/5_funciones.md)
   * Tipos de argumentos y funciones de flecha.
+
+1.6.  [**Entrada y Salida de Datos por Consolosa**](1.%20Fundamentos%20-%20DART/6_dart_io.md)
+  * Librería `dart:io` y conversión de texto (`String`) a número (`int` o `double`) usando en método `.parse()`.
   
 # 2. Programación Orientada a Objetos (POO) con DART
 

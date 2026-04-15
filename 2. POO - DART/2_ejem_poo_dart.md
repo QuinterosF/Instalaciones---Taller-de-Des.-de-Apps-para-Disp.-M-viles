@@ -2,10 +2,10 @@
 
 #### Descargar las *INSTRUCCIONES DE LA PRÁCTICA* en `PDF`: [Práctica de laboratorio 2.pdf](../docs/PRAC_LAB_POO_2.pdf)
 
-## 📖 Contexto
+## Contexto
 Un estudio de desarrollo de videojuegos te ha contratado para programar el núcleo de su nuevo juego de rol. Necesitan un sistema que administre a los personajes del jugador, controle sus puntos de vida, ejecute sus ataques y utilice habilidades especiales.
 
-## 📝 Instrucciones
+## Instrucciones
 Desarrolle una solución en Dart aplicando los 4 pilares de la POO, Mixins, Estructuras de Datos y Control de Flujo. Su código debe guiarse por el siguiente Diagrama de Clases UML y cumplir con los requerimientos descritos a continuación:
 
 ### Diagrama de Clases (UML)

@@ -3,7 +3,7 @@
   * [**Abstracción**](#51-abstracci%C3%B3n)
   * [**Herencia**](#52-herencia)
   * [**Polimorfismo**](#53-polimorfismo)
-  * [**Encapsulamiento**](54-encapsulamiento)
+  * [**Encapsulamiento**](#54-encapsulamiento)
   * [**Mixins**](#6-mixins)
 
 ## 1. ¿Qué es un paradigma de programación?

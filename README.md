@@ -1,15 +1,10 @@
-# Taller de Desarrollo de Aplicaciones para Dispositivos Móviles
+<h1 align="center"> Taller de Desarrollo de Aplicaciones para Dispositivos Móviles </h1>
 
 <p align="center">
   <a href="https://docs.docker.com/" target="blank"><img src="https://storage.googleapis.com/cms-storage-bucket/6a07d8a62f4308d2b854.svg" width="330" alt="Flutter Logo" /></a>
 </p>
 
 ---
-
-# 📚 MATERIAL DEL CURSO:
-
-Haz clic en cada sección para explorar el contenido:
-
 # 1. FUNDAMENTOS - DART
 
 #### Descargar la guía de atajos en `PDF`: [Guía de atajos - Dart.pdf](docs/DART.pdf)
@@ -31,7 +26,9 @@ Haz clic en cada sección para explorar el contenido:
 
 1.6.  [**Entrada y Salida de Datos por Consolosa**](1.%20Fundamentos%20-%20DART/6_dart_io.md)
   * Librería `dart:io` y conversión de texto (`String`) a número (`int` o `double`) usando en método `.parse()`.
-  
+
+---
+
 # 2. Programación Orientada a Objetos (POO) con DART
 
 #### Descargar el texto de POO en `PDF`: [Programación Orientada a Objetos.pdf](docs/POO.pdf)
@@ -57,6 +54,25 @@ Haz clic en cada sección para explorar el contenido:
 
   * [**`PRÁCTICA 4`**: Sistema de Menú de Restaurante Digital.](2.%20POO%20-%20DART/4_ejem_poo_dart.md)
     > [*Código de la práctica 4*](2.%20POO%20-%20DART/Ejemplo%204%20-%20POO%20con%20DART/)
+
+---
+
+# 3. Control de Flujo Avanzado y Asincronía
+3.1 **Manejo de Errores y Excepciones**
+  * Uso de `try`, `catch` y `finally`.
+  * Cláusula `on` para capturar excepciones específicas.
+  * Creación de excepciones personalizadas (`custom exceptions`).
+
+3.2 **Programación Asíncrona (Fundamentos)**
+  * El concepto de `Future`: ¿Qué es y cómo funciona?
+  * Uso de `async` y `await` para leer código asíncrono de forma lineal.
+  * Manejo de errores en procesos asíncronos.
+
+3.3 **Programación Reactiva básica**
+  * Introducción a los `Streams`: Flujos de datos en tiempo real.
+  * Diferencia entre `Future` (un solo valor) y `Stream` (múltiples valores).
+
+---
 
 # 4. Entorno de Desarrollo (Setup) - Flutter 🛠️
 

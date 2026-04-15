@@ -96,7 +96,7 @@ mixin Promocionable {
   void aplicarDescuento(ElementoMenu item, double porcentaje) {
     double descuento = item.precio * (porcentaje / 100);
     item.precio = item.precio - descuento; 
-    print("¡Promoción aplicada a '${item.nombre}'! Nuevo precio: \$${item.precio}");
+    print("¡Promoción aplicada a '${item.nombre}'! Descuento del $porcentaje %");
   }
 }
 ```
@@ -120,7 +120,8 @@ class Plato extends ElementoMenu with Promocionable {
 
   @override
   void mostrarDetalle() {
-    print("PLATO: $nombre | Categoría: $categoria | Precio: \$${precio}");
+    print("   PLATO: $nombre");
+    print("   Categoría: $categoria | Precio: Bs. ${precio.toStringAsFixed(2)}");
   }
 }
 
@@ -137,8 +138,9 @@ class Bebida extends ElementoMenu {
 
   @override
   void mostrarDetalle() {
-    String tipo = esAlcoholica ? "Alcohólica" : "Sin Alcohol";
-    print("BEBIDA: $nombre | Tipo: $tipo | Tamaño: ${tamanoMl}ml | Precio: \$${precio}");
+    String tipo = esAlcoholica ? "Con Alcohol" : "Sin Alcohol";
+    print("   BEBIDA: $nombre");
+    print("   Tipo: $tipo | Tamaño: ${tamanoMl} ml | Precio: Bs. ${precio.toStringAsFixed(2)}");
   }
 }
 ```
@@ -153,32 +155,34 @@ Añade este bloque final a tu archivo `restaurant_app.dart`:
 // (Continuación del archivo: restaurant_app.dart)
 
 void main() {
-  // 1. Estructura de Datos: Lista polimórfica de elementos del menú
+  // 1. Estructura de Datos: Lista de elementos del menú
   List<ElementoMenu> miMenu = [
-    Plato(nombre: "Lasaña Boloñesa", categoria: "Fuerte"),
-    Bebida(nombre: "Limonada Imperial", esAlcoholica: false, tamanoMl: 500),
-    Plato(nombre: "Ceviche de Cámara", categoria: "Entrada"),
-    Bebida(nombre: "Vino Tinto Reserva", esAlcoholica: true, tamanoMl: 150),
+    Plato(nombre: "Planchita", categoria: "Fuerte"),
+    Bebida(nombre: "Limonada", esAlcoholica: false, tamanoMl: 500),
+    Plato(nombre: "Sopa de Maní", categoria: "Entrada"),
+    Bebida(nombre: "Vino Tinto", esAlcoholica: true, tamanoMl: 150),
   ];
 
-  // Asignamos precios iniciales usando el setter
-  miMenu[0].precio = 15.50;
-  miMenu[1].precio = 3.00;
-  miMenu[2].precio = 12.00;
-  miMenu[3].precio = 25.00;
+  // Asignación de precios iniciales usando el Setter
+  miMenu[0].precio = 45.00;
+  miMenu[1].precio = 8.00;
+  miMenu[2].precio = 9.50;
+  miMenu[3].precio = 35.00;
 
-  print("=== MENÚ DIGITAL DEL DÍA ===");
+  print("=============================================");
+  print("         SISTEMA DE RESTAURANTE DIGITAL      ");
+  print("=============================================\n");
 
-  // 2. Control de Flujo: Recorremos la lista
+  // 2. Control de Flujo: Procesamiento del menú
   for (var item in miMenu) {
     
-    // Verificamos si el item es apto para promociones
-    if (item is Promocionable) {
-      // Aplicamos un 10% de descuento solo a los platos
+    // Verificación de tipo para aplicar lógica de Mixin
+    if (item is Plato) {
+      // Aplicamos un 10% de descuento solo si el item es 'Promocionable'
       item.aplicarDescuento(item, 10);
     }
 
-    // Polimorfismo: Cada objeto sabe cómo mostrar su detalle
+    // Polimorfismo: Llamada al método mostrarDetalle
     item.mostrarDetalle();
     
     print("-" * 45);

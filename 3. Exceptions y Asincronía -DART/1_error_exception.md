@@ -1,5 +1,8 @@
 # 3.1 Manejo de Errores y Excepciones
-  * [**try, catch y finally**](#1-la-red-de-seguridad-try-catch-y-finally)
+  * [**`try`, `catch` y `finally`**](#1-la-red-de-seguridad-try-catch-y-finally)
+  * [**La claúsula `on`**](#2-siendo-espec%C3%ADficos-la-cl%C3%A1usula-on)
+  * [**Custom Exceptions**](#3-creando-nuestras-propias-reglas-custom-exceptions)
+  * [**Simulación y código completo**](#4-simulaci%C3%B3n-y-c%C3%B3digo-completo)
 
 Imagina que estás usando tu app de banco favorita. Intentas transferir dinero, pero justo en ese momento tu conexión a internet falla o intentas enviar más dinero del que tienes. Si no se ha previsto esto, la app se cerrará inesperadamente.
 

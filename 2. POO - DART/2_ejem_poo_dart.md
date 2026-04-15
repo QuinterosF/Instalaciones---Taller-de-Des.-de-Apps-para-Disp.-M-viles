@@ -10,7 +10,41 @@ Desarrolle una solución en Dart aplicando los 4 pilares de la POO, Mixins, Estr
 
 ### Diagrama de Clases (UML)
 
-<p align="center"> <img src="../img/diagram_class_uml_2.png" width="500"> </p>
+<!-- <p align="center"> <img src="../img/diagram_class_uml_2.png" width="500"> </p> -->
+
+```mermaid
+classDiagram
+    class Personaje {
+        <<abstract>>
+        -_puntosVida: int
+        +nombre: String
+        +Personaje(nombre)*
+        +recibirDano(cantidad: int) void
+        +estaVivo() bool
+        +puntosVida(value: int) void
+        +atacar() void*
+    }
+    
+    class Guerrero {
+        +fuerza: int
+        +atacar() void
+    }
+    
+    class Mago {
+        +poderMagico: int
+        +puntosCuracion: int
+        +atacar() void
+    }
+    
+    class Curador {
+        <<mixin>>
+        +curar(heroe: Personaje, puntosCuracion: int) void
+    }
+    
+    Personaje <|-- Guerrero
+    Personaje <|-- Mago
+    Mago --|> Curador
+```
 
 ### Requerimientos del Sistema:
 **1.	Abstracción y Encapsulamiento:** Crea la clase base Personaje. El atributo `_puntosVida` debe ser privado (iniciando en 100). Implementa métodos para reducir la vida (`recibirDano`) y verificar si el personaje sigue en pie (`estaVivo`). Define el método abstracto `atacar()`.

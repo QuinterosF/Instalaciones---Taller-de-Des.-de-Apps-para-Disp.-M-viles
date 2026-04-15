@@ -2,9 +2,11 @@
 
 #### Descargar las *INSTRUCCIONES DE LA PRÁCTICA* en `PDF`: [Práctica de laboratorio 1.pdf](../docs/PRAC_LAB_POO_1.pdf)
 
-**CONTEXTO:** Una asociación de transporte requiere automatizar la gestión de su flota de vehículos. Para ello, se necesita desarrollar el núcleo de un sistema en Dart que modele el comportamiento de sus diferentes unidades de transporte, garantizando la seguridad de la información interna de cada vehículo y estandarizando las operaciones de ruta.
+## Contexto
+Una asociación de transporte requiere automatizar la gestión de su flota de vehículos. Para ello, se necesita desarrollar el núcleo de un sistema en Dart que modele el comportamiento de sus diferentes unidades de transporte, garantizando la seguridad de la información interna de cada vehículo y estandarizando las operaciones de ruta.
 
-**INSTRUCCIONES:** Desarrolle una solución en `Dart` aplicando los cuatro pilares de la [Programación Orientada a Objetos](poo.md), guiándose por el Diagrama de Clases UML adjunto. Su código debe cumplir con los siguientes requerimientos:
+## Instrucciones
+Desarrolle una solución en `Dart` aplicando los cuatro pilares de la [Programación Orientada a Objetos](poo.md), guiándose por el Diagrama de Clases UML adjunto. Su código debe cumplir con los siguientes requerimientos:
 
 ### Diagrama de Clases (UML)
 

@@ -1,4 +1,3 @@
-// home_simulation.dart
 import 'device_templates.dart';
 
 // Herencia simple

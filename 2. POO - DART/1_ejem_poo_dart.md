@@ -37,8 +37,8 @@ classDiagram
         +iniciarRuta() void
     }
     
-    Vehiculo <|-- Bus
-    Vehiculo <|-- Minivan
+    Vehiculo <|-- Bus : extends
+    Vehiculo <|-- Minivan : extends
 ```
 
 1.	***Abstracción:*** Defina el concepto general de un vehículo en el sistema. Este componente no debe poder instanciarse directamente, pero debe establecer la estructura base (marca y modelo) y definir la firma de la acción principal del sistema: `iniciarRuta()`.
@@ -236,5 +236,6 @@ void main() {
 *   **Escalabilidad**: Si mañana la empresa compra un Taxi, solo tendrían que crear la clase `Taxi`, heredar de `Vehiculo` y sobrescribir su propio método; el bucle `for` en el `main()` no tendría que modificarse en absoluto.
 
 ---
+### 📂 Archivos de Código (Solución Final)
 
 >  [*DESCARGAR CÓDIGO COMPLETO DE LA SOLUCIÓN EN DART*](Ejemplo%201%20-%20POO%20con%20DART/)

@@ -213,5 +213,5 @@ void main() {
 
 ---
 
-## Conclusión para tu carrera como Desarrollador
+## Conclusión
 Manejar excepciones no se trata solo de evitar que la app se cierre. Se trata de **comunicación**. Un buen manejo de errores le dice al usuario exactamente qué pasó ("No tienes internet") en lugar de dejarlo frente a una pantalla en blanco o una app congelada.

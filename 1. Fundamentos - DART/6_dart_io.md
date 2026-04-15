@@ -1,4 +1,4 @@
-# 6. Entrada y Salida de Datos por Consola
+# 6. ENTRADA Y SALIDA DE DATOS POR CONSOLA
 
 Para que una aplicación sea interactiva, necesita recibir información del usuario y mostrar resultados. En Dart, esto se logra utilizando la librería `dart:io`. En esta guía, aprenderás a capturar texto, números enteros y decimales, y a verificar que los tipos de datos sean los correctos.
 

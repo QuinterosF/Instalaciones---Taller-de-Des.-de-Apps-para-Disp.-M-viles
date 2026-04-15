@@ -33,7 +33,7 @@ Haz clic en cada sección para explorar el contenido:
 
 #### Descargar el texto de POO en `PDF`: [Programación Orientada a Objetos.pdf](docs/POO.pdf)
 
-2.1.  [**Fundamentos - POO** ***(+ ejemplos)***](2.%20POO%20-%20DART/poo.md)
+#### 2.1.  [Fundamentos - POO *(+ ejemplos)*](2.%20POO%20-%20DART/poo.md)
   * ¿Qué es la Programación Orientada a Objetos?
   * Clases e Intancia de una Clase (Objeto)
   * Abstracción
@@ -42,7 +42,7 @@ Haz clic en cada sección para explorar el contenido:
   * Encapsulamiento
   * Mixin
 
-2.2.  **Prácticas de Laboratorio de POO con DART**
+#### 2.2.  Prácticas de Laboratorio de POO con DART
   * [**`PRÁCTICA 1`**: Sistema de Gestión de Flota de Transporte "Rutas".](2.%20POO%20-%20DART/1_ejem_poo_dart.md) 
     > [*Código de la práctica 1*](2.%20POO%20-%20DART/Ejemplo%201%20-%20POO%20con%20DART/)
 

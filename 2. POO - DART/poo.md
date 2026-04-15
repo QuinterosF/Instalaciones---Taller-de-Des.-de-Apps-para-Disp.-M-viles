@@ -1,5 +1,11 @@
 <p align="center"> <h1 align="center"> Programación Orientada a Objetos (POO) </h1> </p>
 
+  * [**Abstracción**](#51-abstracci%C3%B3n)
+  * [**Herencia**](#52-herencia)
+  * [**Polimorfismo**](#53-polimorfismo)
+  * [**Encapsulamiento**](54-encapsulamiento)
+  * [**Mixins**](#6-mixins)
+
 ## 1. ¿Qué es un paradigma de programación?
 Es la forma en que los programadores decidimos cómo irá estructurado nuestro código. Un paradigma establece un patrón o una forma en la que nuestros programas van a estar organizados.
 

@@ -56,10 +56,9 @@ classDiagram
 5.	Finalmente, en la función `main()`, cree una lista que contenga objetos de ambos tipos y utilice un bucle para ejecutar el método `iniciarRuta()` en cada elemento, demostrando cómo el sistema responde dinámicamente según el tipo de objeto.
 
 ---
+## 💻 Solución Paso a Paso
 
-#### *A continuación, resolveremos el problema aplicando los cuatro pilares de la Programación Orientada a Objetos paso a paso.*
-
-## Paso 1: Abstracción
+### Paso 1: Abstracción
 
 **Objetivo:** Definir el concepto general de un vehículo que no pueda instanciarse directamente, estableciendo su estructura base (marca y modelo) y la firma de la acción principal `iniciarRuta()`.
 
@@ -86,7 +85,7 @@ abstract class Vehiculo {
 
 ---
 
-## Paso 2: Encapsulamiento
+### Paso 2: Encapsulamiento
 
 **Objetivo:** Proteger el estado interno de los vehículos. El kilometraje debe ser estrictamente privado, iniciar en cero, e incrementarse solo mediante el método `registrarViaje(double distancia)`. Se debe proporcionar una forma de leerlo sin modificarlo directamente.
 
@@ -130,7 +129,7 @@ abstract class Vehiculo {
 
 ---
 
-## Paso 3: Herencia
+### Paso 3: Herencia
 
 **Objetivo:** Modelar dos tipos específicos de unidades (`Bus` con `capacidadPasajeros` y `Minivan` con `tipoTraccion`) que reutilicen la estructura y comportamiento del concepto general de vehículo.
 
@@ -176,7 +175,7 @@ class Minivan extends Vehiculo {
 
 ---
 
-## Paso 4: Polimorfismo
+### Paso 4: Polimorfismo
 
 **Objetivo:** Implementar el comportamiento específico del método `iniciarRuta()` para cada unidad, imprimiendo mensajes personalizados. Luego, en el `main()`, iterar sobre una lista de ambos objetos para demostrar cómo el sistema responde dinámicamente.
 
@@ -232,7 +231,7 @@ void main() {
 
 **Explicación:**
 *   **¿Qué es el polimorfismo aquí?**: La palabra significa "muchas formas". El método `iniciarRuta()` toma diferentes formas dependiendo del objeto que lo ejecute (imprimiendo sobre pasajeros si es un Bus, o sobre tracción si es una Minivan).
-*   **La magia del bucle `for`**: La lista `flotaRutas` es de tipo `Vehiculo`. El bucle toma cada unidad tratándola como un simple Vehículo y le da la orden de iniciar ruta.
+*   **El bucle `for`**: La lista `flotaRutas` es de tipo `Vehiculo`. El bucle toma cada unidad tratándola como un simple Vehículo y le da la orden de iniciar ruta.
 *   **Decisión dinámica**: En tiempo de ejecución, Dart revisa qué es el objeto en realidad (un Bus o una Minivan) y usa la versión del método que le corresponde.
 *   **Escalabilidad**: Si mañana la empresa compra un Taxi, solo tendrían que crear la clase `Taxi`, heredar de `Vehiculo` y sobrescribir su propio método; el bucle `for` en el `main()` no tendría que modificarse en absoluto.
 

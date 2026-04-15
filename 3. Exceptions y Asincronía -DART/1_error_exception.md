@@ -1,4 +1,5 @@
 # 3.1 Manejo de Errores y Excepciones
+  * [**try, catch y finally**](#1-la-red-de-seguridad-try-catch-y-finally)
 
 Imagina que estás usando tu app de banco favorita. Intentas transferir dinero, pero justo en ese momento tu conexión a internet falla o intentas enviar más dinero del que tienes. Si no se ha previsto esto, la app se cerrará inesperadamente.
 
@@ -134,7 +135,6 @@ void realizarTransferencia(int monto, bool simularException) {
     print("Operación finalizada. Limpiando datos temporales...");
   }
 }
-
 
 // La claúsula "on"
 void procesarPago(String montoTexto) {

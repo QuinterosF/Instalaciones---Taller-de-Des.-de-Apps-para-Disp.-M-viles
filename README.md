@@ -43,10 +43,17 @@ Haz clic en cada sección para explorar el contenido:
   * Mixin
 
 2.2.  **Prácticas de Laboratorio de POO con DART**
-  * [`Práctica 1`: Sistema de Gestión de Flota de Transporte "Rutas".](2.%20POO%20-%20DART/1_ejem_poo_dart.md) *(guía paso a paso)*
-  * [*Código de la práctica 1*](2.%20POO%20-%20DART/Ejemplo%201%20-%20POO%20con%20DART/)
-  * [`Práctica 2`: Sistema de Combate (Videojuego).](2.%20POO%20-%20DART/2_ejem_poo_dart.md) *(guía paso a paso)*
-  * [*Código de la práctica 2*](2.%20POO%20-%20DART/Ejemplo%202%20-%20POO%20con%20DART/)
+  * [**`PRÁCTICA 1`**: Sistema de Gestión de Flota de Transporte "Rutas".](2.%20POO%20-%20DART/1_ejem_poo_dart.md) 
+    > [*Código de la práctica 1*](2.%20POO%20-%20DART/Ejemplo%201%20-%20POO%20con%20DART/)
+
+  * [**`PRÁCTICA 2`**: Sistema de Combate (Videojuego).](2.%20POO%20-%20DART/2_ejem_poo_dart.md)
+    > [*Código de la práctica 2*](2.%20POO%20-%20DART/Ejemplo%202%20-%20POO%20con%20DART/)
+
+  * [**`PRÁCTICA 3`**: Sistema de Domótica (Casa Inteligente).](2.%20POO%20-%20DART/3_ejem_poo_dart.md)
+    > [*Código de la práctica 3*](2.%20POO%20-%20DART/Ejemplo%203%20-%20POO%20con%20DART/)
+
+  * [**`PRÁCTICA 4`**: Sistema de Menú de Restaurante Digital.](2.%20POO%20-%20DART/4_ejem_poo_dart.md)
+    > [*Código de la práctica 4*](2.%20POO%20-%20DART/Ejemplo%204%20-%20POO%20con%20DART/)
 
 # 4. Entorno de Desarrollo (Setup) - Flutter 🛠️
 

@@ -133,7 +133,6 @@ void main() {
   print("-" * 45);
 
   // SIMULACIÓN
-  print("ESCENARIO A: Fallo de conexión");
   tarea_1(exitosa: false);
   tarea_2();
 }

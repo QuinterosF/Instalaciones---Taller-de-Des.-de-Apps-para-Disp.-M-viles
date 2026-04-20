@@ -58,19 +58,19 @@
 ---
 
 # 3. Control de Flujo Avanzado y Asincronía
-3.1 **Manejo de Errores y Excepciones**
+3.1 [**Manejo de Errores y Excepciones**](3.%20%Exceptions20y%20Asincronía%20-DART/4_ejem_poo_dart.md)
   * Uso de `try`, `catch` y `finally`.
   * Cláusula `on` para capturar excepciones específicas.
   * Creación de excepciones personalizadas (`custom exceptions`).
 
-3.2 **Programación Asíncrona (Fundamentos)**
+3.2 [**Programación Asíncrona (Fundamentos)**](2.%20POO%20-%20DART/4_ejem_poo_dart.md)
   * El concepto de `Future`: ¿Qué es y cómo funciona?
   * Uso de `async` y `await` para leer código asíncrono de forma lineal.
   * Manejo de errores en procesos asíncronos.
 
-3.3 **Programación Reactiva básica**
-  * Introducción a los `Streams`: Flujos de datos en tiempo real.
+3.3 [**Streams: Flujos de Datos en Tiempo Real**](2.%20POO%20-%20DART/4_ejem_poo_dart.md)
   * Diferencia entre `Future` (un solo valor) y `Stream` (múltiples valores).
+  * `Streams` (Programación Reactiva).
 
 ---
 

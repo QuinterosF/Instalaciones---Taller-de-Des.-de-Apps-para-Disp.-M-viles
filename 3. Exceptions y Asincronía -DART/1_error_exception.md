@@ -73,7 +73,8 @@ void procesarPago(String montoTexto) {
 
 ## 3. Creando nuestras propias reglas: Custom Exceptions
 
-A veces, las excepciones que trae Dart por defecto (como `FormatException` o `IOException`) no son suficientes para describir la lógica de nuestro negocio. En nuestro banco, necesitamos una excepción específica cuando el usuario no tiene suficiente dinero.
+A veces, las excepciones que trae Dart por defecto (como `FormatException` o `IOException`) no son suficientes para describir la lógica de nuestro negocio.
+En nuestro banco, necesitamos una excepción específica cuando el usuario no tiene suficiente dinero.
 
 Para crear una excepción personalizada, simplemente creamos una clase que implemente `Exception`.
 

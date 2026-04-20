@@ -57,7 +57,7 @@
 
 ---
 
-# 3. Control de Flujo Avanzado y Asincronía
+# 3. Asincronía y Control de Flujo Avanzado
 3.1 [**Manejo de Errores y Excepciones**](3.%20Exceptions%20y%20Asincronía%20-%20DART/1_error_exception.md)
   * Uso de `try`, `catch` y `finally`.
   * Cláusula `on` para capturar excepciones específicas.

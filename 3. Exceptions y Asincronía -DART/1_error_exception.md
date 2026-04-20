@@ -20,13 +20,13 @@ En Dart, cuando sospechamos que un bloque de código puede fallar, lo envolvemos
 
 ### Ejemplo: El intento de transferencia básica
 ```dart
-void realizarTransferencia(int monto, bool simularException) {
+void realizarTransferencia(int monto) {
   try {
     print("Iniciando proceso de transferencia...");
 
     // Simulamos un error
-    if (simularException) {
-      throw "ERROR FATAL!!!";
+    if (monto <= 0) {
+      throw "MONTO NEGATIVO INVÁLIDO"; //Lanzar error con "throw"
     }
 
     print("Transferencia de \$$monto completada con éxito.");
@@ -193,16 +193,16 @@ void validarRetiro(double saldo, double retiro) {
 void main() {
   print("\n===== SIMULANDO QUE TODO SALE BIEN =====");
   print("-" * 40);
-  realizarTransferencia(100, false);
+  realizarTransferencia(100);
   print("-" * 40);
   procesarPago("100");
   print("-" * 40);
   validarRetiro(200, 100);
   print("-" * 40);
 
-  print("\n\n===== SIMULANDO QUE TODO SALE MAL =====");
+  print("\n===== SIMULANDO QUE TODO SALE MAL =====");
   print("-" * 40);
-  realizarTransferencia(100, true);
+  realizarTransferencia(-100);
   print("-" * 40);
   procesarPago("100a");
   print("-" * 40);

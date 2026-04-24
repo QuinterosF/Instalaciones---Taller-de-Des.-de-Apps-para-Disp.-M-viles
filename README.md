@@ -99,7 +99,8 @@ Por favor, sigue esta guía en el **orden estricto** en el que se presenta para 
    * Tips de rendimiento y aceleración por hardware.
    * Configuración de un teléfono Android físico (Opciones de Desarrollador y Depuración USB).
 
-> **💡 Nota:** Si en algún paso la terminal (`cmd` o `PowerShell`) no reconoce un comando, recuerda cerrarla y volverla a abrir para que reconozca los nuevos cambios en el sistema.
+>[!TIP]
+>Si en algún paso la terminal (`cmd` o `PowerShell`) no reconoce un comando, recuerda cerrarla y volverla a abrir para que reconozca los nuevos cambios en el sistema.
 
 ---
 

@@ -80,46 +80,6 @@ Para crear una excepción personalizada, simplemente creamos una clase que imple
 
 ### Paso A: Definir la excepción
 ```dart
-class SaldoInsuficienteException implements Exception {
-  final double saldoActual;
-  final double montoIntentado;
-
-  SaldoInsuficienteException({
-    required this.saldoActual,
-    required this.montoIntentado,
-  });
-
-  @override
-  String toString() =>
-      "SaldoInsuficienteException: Intentaste transferir Bs. $montoIntentado pero solo tienes Bs. $saldoActual.";
-}
-```
-
-### Paso B: Lanzar (`throw`) y Capturar la excepción
-Ahora, en nuestra lógica de negocio, podemos "lanzar" el error manualmente cuando se rompa una regla.
-
-```dart
-void validarRetiro(double saldo, double retiro) {
-  try {
-    if (retiro > saldo) {
-      // Lanzamos nuestra propia excepción
-      throw SaldoInsuficienteException(
-        saldoActual: saldo,
-        montoIntentado: retiro,
-      );
-    }
-    print("Retiro autorizado.");
-  }
-  on SaldoInsuficienteException catch (e) {
-    print("Operación denegada.");
-    print(e); // Imprime nuestro mensaje personalizado
-  }
-}
-```
-
-## 4. Simulación y código completo
-
-```dart
 // try, catch y finally
 void realizarTransferencia(int monto, bool simularException) {
   try {
@@ -132,8 +92,8 @@ void realizarTransferencia(int monto, bool simularException) {
 
     print("Transferencia de \$$monto completada con éxito.");
   } 
-  catch (e) {
-    print("Algo salió mal: $e");
+  catch (error) {
+    print("Algo salió mal: $error");
   }
   finally {
     print("Operación finalizada. Limpiando datos temporales...");
@@ -194,7 +154,7 @@ void validarRetiro(double saldo, double retiro) {
 void main() {
   print("\n===== SIMULANDO QUE TODO SALE BIEN =====");
   print("-" * 40);
-  realizarTransferencia(100);
+  realizarTransferencia(100, false);
   print("-" * 40);
   procesarPago("100");
   print("-" * 40);
@@ -203,7 +163,7 @@ void main() {
 
   print("\n===== SIMULANDO QUE TODO SALE MAL =====");
   print("-" * 40);
-  realizarTransferencia(-100);
+  realizarTransferencia(-100, true);
   print("-" * 40);
   procesarPago("100a");
   print("-" * 40);

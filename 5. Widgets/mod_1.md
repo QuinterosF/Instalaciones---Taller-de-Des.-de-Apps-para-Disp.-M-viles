@@ -226,3 +226,228 @@ class MenuPrincipalScreen extends StatelessWidget {
 }
 
 ```
+
+--
+
+## 3. El Poder del Estado y la Anatomía de las Cajas
+
+Hasta este punto, hemos construido una pantalla principal estática. Ahora, daremos el salto más importante en Flutter: hacer que nuestra aplicación reaccione a las acciones del usuario.
+
+Antes de escribir el código de nuestra pantalla interactiva, debemos entender las herramientas y conceptos matemáticos/visuales que utilizaremos.
+
+### 3.1. La Revolución del Estado: `StatelessWidget` vs `StatefulWidget`
+
+Imagina que quieres dibujar un interruptor de luz.
+
+* Un **`StatelessWidget` (Widget sin estado)** es como una *fotografía* de un interruptor. Una vez que la imprimes y la pegas en la pantalla, ya no puede cambiar. Si internamente en el código cambias la variable de "apagado" a "encendido", la fotografía seguirá mostrando el interruptor apagado porque es inmutable (no se puede redibujar).
+* Un **`StatefulWidget` (Widget con estado)** es un *interruptor real*. Tiene memoria (Estado) y sabe si está encendido o apagado.
+
+Para que este interruptor real funcione, necesita un motor, y ese motor se llama **`setState((){})`**.
+
+* **La regla de oro de `setState`:** Si tienes una variable `ancho = 100` y la cambias a `ancho = 200`, la pantalla **no se actualizará sola**. Al envolver ese cambio dentro de `setState((){ ancho = 200; })`, le estás enviando un mensaje urgente al framework de Flutter: *"¡Atención! Un dato visual acaba de cambiar. Por favor, vuelve a dibujar (renderizar) esta pantalla inmediatamente con los nuevos valores"*.
+
+### 3.2. Anatomía de la Caja Multiusos: El Widget `Container`
+
+El `Container` es el equivalente a un bloque de Lego base. Por sí solo es invisible, pero es el widget más versátil para crear diseños. Funciona como una caja de cartón a la que puedes darle forma, color y estilo.
+
+**Propiedad crucial: `decoration`**
+
+Para darle estilo a un `Container` usamos la propiedad `decoration`, la cual recibe un objeto `BoxDecoration`. Aquí configuramos su estética:
+
+* `color`: Pinta el fondo de la caja.
+* `borderRadius`: Redondea las esquinas. Recibe un objeto `BorderRadius.circular(valor)` para aplicar una curva matemática a las cuatro esquinas.
+* `boxShadow`: Permite agregar sombras para crear un efecto de elevación (3D).
+
+> ⚠️ **Peligro Crítico (Error común de principiantes):**
+> Si decides usar la propiedad `decoration` en un `Container`, **el color de fondo debe ir OBLIGATORIAMENTE dentro del `BoxDecoration`**. Si pones un color afuera del `decoration` y otro adentro, Flutter sufrirá una "colisión de diseño" y la aplicación se cerrará con una pantalla roja de error.
+
+### 3.3. Anatomía de los Espacios: `Padding` y `EdgeInsets`
+
+En el diseño de interfaces, si pegamos un texto directamente al borde de la pantalla, se ve estéticamente mal y difícil de leer. Para solucionar esto usamos el widget **`Padding`** (Relleno o Margen interno).
+
+El widget `Padding` tiene una propiedad obligatoria llamada `padding`, la cual no recibe un simple número, sino un objeto geométrico llamado **`EdgeInsets`** (Inserciones de bordes).
+
+Existen 3 formas principales de usar `EdgeInsets`:
+
+1. `EdgeInsets.all(10.0)`: Aplica exactamente 10 píxeles de espacio en los 4 lados (Arriba, Abajo, Izquierda, Derecha).
+2. `EdgeInsets.symmetric(horizontal: 20.0, vertical: 5.0)`: Aplica 20 píxeles a la izquierda/derecha, y 5 píxeles arriba/abajo.
+3. `EdgeInsets.only(top: 15.0)`: Aplica espacio únicamente en el lado especificado (en este caso, 15 píxeles solo en la parte superior).
+
+### 3.4. El Controlador de Tamaño: El Widget `SizedBox`
+
+Si un `Container` es una caja de cartón decorada, un **`SizedBox`** es un cubo de cristal invisible y rígido. Su única función en la vida es obligar a que el espacio que ocupa tenga un ancho (`width`) y un alto (`height`) matemáticamente exactos.
+
+**Se usa para dos cosas:**
+
+1. **Forzar tamaño:** Si envuelves un botón dentro de un `SizedBox(width: 200)`, el botón se estirará obligatoriamente a 200 píxeles, sin importar si su texto es corto o largo.
+2. **Crear separaciones:** Si tienes dos textos apilados y quieres separarlos, puedes poner un `SizedBox(height: 20)` vacío entre ellos. Actuará como un ladrillo invisible que empuja los elementos, separándolos por 20 píxeles.
+
+---
+
+## Construyendo el Playground Interactivo
+
+Con la teoría clara sobre el Estado, el `Container` y los espacios, es hora de programar. Vamos a crear una pantalla dividida en dos: la mitad superior mostrará nuestro `Container` (la vista previa) y la mitad inferior tendrá los controles deslizantes (`Slider`) para modificarlo en tiempo real.
+
+### 3.5. Creación del Archivo y el `StatefulWidget`
+
+Para mantener nuestro proyecto ordenado bajo estándares profesionales, no escribiremos todo en el `main.dart`.
+
+1. En Visual Studio Code, dentro de la carpeta `lib`, crea una nueva carpeta llamada `screens`.
+2. Dentro de `screens`, crea un archivo llamado `container_screen.dart`.
+3. Escribe `stful` y presiona la tecla `Tab` (o `Enter`). Visual Studio Code generará automáticamente la estructura de un **StatefulWidget**. Nómbralo `ContainerScreen`.
+
+Notarás que Flutter crea **dos clases** conectadas:
+
+1. `class ContainerScreen`: Es la configuración pública de la pantalla.
+2. `class _ContainerScreenState`: Es la clase privada (indicada por el guion bajo `_`) que guarda la memoria de la pantalla y dibuja la interfaz. Aquí es donde trabajaremos.
+
+### 3.6. Definiendo las Variables de Estado
+
+Dentro de la clase `_ContainerScreenState`, antes del método `build`, declararemos las variables que van a cambiar. En Dart, colocar un guion bajo al inicio del nombre de una variable (ej. `_dimension`) la hace "privada", una excelente práctica de encapsulamiento en ingeniería de software.
+
+```dart
+class _ContainerScreenState extends State<ContainerScreen> {
+  // VARIABLES DE ESTADO (Memoria de la pantalla)
+  double _dimension = 150.0; // Valor inicial del ancho y alto
+  double _radioBorde = 0.0;  // Valor inicial de las esquinas (cuadrado perfecto)
+  
+  // ... método build ...
+}
+
+```
+
+### 3.7. El Controlador de Interfaz: El Widget `Slider`
+
+Para modificar nuestras variables `_dimension` y `_radioBorde`, usaremos un widget nativo llamado `Slider` (Control deslizante).
+
+* **Anatomía del `Slider`:**
+* `value`: Recibe la variable actual que va a representar en la barra (ej. `_dimension`).
+* `min` y `max`: Establecen los límites matemáticos permitidos.
+* `onChanged`: Es la función que se dispara cada milisegundo mientras el usuario arrastra el control. Recibe un parámetro (el `nuevoValor`) que usaremos para actualizar nuestra variable dentro de un `setState`.
+
+
+
+### 💻 Práctica 3.2: El Código Completo de la Pantalla
+
+A continuación, escribiremos el código de nuestra interfaz. Presta especial atención a los comentarios en el código, ya que explican cómo el widget `Expanded` nos ayuda a dividir la pantalla matemáticamente.
+
+Copia este código en tu archivo `container_screen.dart`:
+
+```dart
+import 'package:flutter/material.dart';
+
+class ContainerScreen extends StatefulWidget {
+  const ContainerScreen({super.key});
+
+  @override
+  State<ContainerScreen> createState() => _ContainerScreenState();
+}
+
+class _ContainerScreenState extends State<ContainerScreen> {
+  // 1. Nuestras variables reactivas
+  double _dimension = 150.0;
+  double _radioBorde = 12.0;
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Playground: Container'),
+        backgroundColor: Colors.teal,
+        foregroundColor: Colors.white,
+      ),
+      // Usamos Column para apilar la vista previa arriba y los controles abajo
+      body: Column(
+        children: [
+          // 2. ÁREA DE VISTA PREVIA
+          // Expanded obliga a su hijo a tomar todo el espacio restante disponible.
+          // Al usar dos Expanded, la pantalla se divide exactamente 50/50.
+          Expanded(
+            child: Center(
+              // SizedBox fuerza al Container a tener un tamaño exacto
+              child: SizedBox(
+                width: _dimension, // Conectado a la variable
+                height: _dimension, // Conectado a la variable
+                child: Container(
+                  decoration: BoxDecoration(
+                    color: Colors.teal,
+                    // Conectado a la variable
+                    borderRadius: BorderRadius.circular(_radioBorde), 
+                    // Una sombra sutil para dar efecto 3D
+                    boxShadow: const [
+                      BoxShadow(color: Colors.black26, blurRadius: 10, offset: Offset(0, 5))
+                    ],
+                  ),
+                  child: const Center(
+                    child: Text('Caja', style: TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.bold)),
+                  ),
+                ),
+              ),
+            ),
+          ),
+          
+          // 3. ÁREA DE CONTROLES
+          Expanded(
+            child: Container(
+              width: double.infinity,
+              padding: const EdgeInsets.all(20.0), // Margen interno de 20px
+              color: Colors.grey.shade100, // Fondo gris claro para diferenciar el panel
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  // --- CONTROL 1: TAMAÑO ---
+                  // Usamos .toInt() para mostrar el número sin decimales en el texto
+                  Text('Tamaño de la Caja: ${_dimension.toInt()} px', 
+                       style: const TextStyle(fontWeight: FontWeight.bold)),
+                  Slider(
+                    value: _dimension,
+                    min: 50.0,
+                    max: 250.0,
+                    activeColor: Colors.teal,
+                    onChanged: (nuevoValor) {
+                      // CRÍTICO: setState avisa a Flutter que debe redibujar la pantalla
+                      setState(() {
+                        _dimension = nuevoValor;
+                      });
+                    },
+                  ),
+                  const SizedBox(height: 20), // Separador invisible
+                  
+                  // --- CONTROL 2: BORDES ---
+                  Text('Radio del Borde: ${_radioBorde.toInt()} px', 
+                       style: const TextStyle(fontWeight: FontWeight.bold)),
+                  Slider(
+                    value: _radioBorde,
+                    min: 0.0,
+                    max: 125.0, // 125 es la mitad de 250 (el tamaño máximo), lo que generará un círculo perfecto
+                    activeColor: Colors.teal,
+                    onChanged: (nuevoValor) {
+                      setState(() {
+                        _radioBorde = nuevoValor;
+                      });
+                    },
+                  ),
+                ],
+              ),
+            ),
+          )
+        ],
+      ),
+    );
+  }
+}
+
+```
+
+### 3.8. Conectando el Menú Principal (Resolviendo el Error)
+
+¿Recuerdas que en el Módulo 2 dejamos un error intencional en `main.dart` porque `ContainerScreen` no existía? Es hora de enlazar ambas pantallas.
+
+Ve a tu archivo `lib/main.dart`. En la parte superior (debajo de la importación de `material.dart`), agrega la ruta a tu nuevo archivo:
+
+```dart
+import 'package:catalogo_widgets_app/screens/container_screen.dart';
+
+```
+
+Al hacer esto, el error en tu `ListTile` desaparecerá.

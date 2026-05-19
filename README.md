@@ -1,7 +1,7 @@
 <h1 align="center"> Taller de Desarrollo de Aplicaciones para Dispositivos Móviles </h1>
 
 <p align="center">
-  <a href="https://docs.docker.com/" target="blank"><img src="https://storage.googleapis.com/cms-storage-bucket/6a07d8a62f4308d2b854.svg" width="330" alt="Flutter Logo" /></a>
+  <a href="https://docs.docker.com/" target="blank"><img src="https://cdn.prod.website-files.com/6377bf360873283fad488724/638ca82a95fb434e6f42a283_Flutter-p-1600.png" width="530" alt="Flutter Logo" /></a>
 </p>
 
 ---
